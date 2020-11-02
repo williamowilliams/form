@@ -31,14 +31,6 @@ return (
     <div className="app">
     <h1>Engineering Change Request</h1>
     <form className="form" onSubmit={formik.handleSubmit}>
-        <label htmlFor="email">Email Address</label>
-        <input 
-            id="email"
-            name="email"
-            type="email"
-            onChange={formik.handleChange}
-            value={formik.values.email}
-        />
         <label htmlFor="name">Name</label>
         <input
             id="name"
@@ -46,6 +38,14 @@ return (
             type="text"
             onChange={formik.handleChange}
             value={formik.values.name}
+        />
+        <label htmlFor="email">Email Address</label>
+        <input 
+            id="email"
+            name="email"
+            type="email"
+            onChange={formik.handleChange}
+            value={formik.values.email}
         />
         <label htmlFor="department">Department</label>
         <input
