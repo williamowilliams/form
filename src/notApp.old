@@ -1,0 +1,144 @@
+import './App.css';
+
+function App() {
+  return (
+    <div className="app">
+      <h1>Engineering Change Request</h1>
+    <form className="form">
+      <label for="name">Name</label>
+      <input type="name" class="form-control" id="name"/>
+
+      <label for="department">Department</label>
+      <input type="department" class="form-control" id="user_department"/>
+
+
+      <label for="supervisor">Supervisor</label>
+      <input type="supervisor" class="form-control" id="user_supervisor"/>
+
+      <label for="date">Today's Date</label>
+      <input type="date" class="form-control" id="date"/>
+
+      <label for="dateNeeded">Date Needed By</label>
+      <input type="date" class="form-control" id="form_dateNeeded"/>
+
+      <label for="revision">Revision</label>
+      <input type="revision" class="form-control" id="form_revision"/>
+
+    <label for="hardware">Hardware Product Type</label>
+    <select multiple class="form-control" id="hardwareList">
+      <option value = "1"></option>
+      <option value = "2">BOC's & Add-in Cards</option>
+      <option value = "3">Cables</option>
+      <option value = "4">Cash Drawers M23XX</option>
+      <option value = "5">Components</option>
+      <option value = "6">Counter Top Player Terminal</option>
+      <option value = "7">Customer Displays</option>
+      <option value = "8">EverServ 2 Series M81XX</option>
+      <option value = "9">EverServ 6 Series M71XX</option>
+      <option value = "10">Gemini M5050-XX</option>
+      <option value = "11">Hard Drives</option>
+      <option value = "12">Hardware</option>
+      <option value = "13">Switches or Routers</option>
+      <option value = "14">Kiosk</option>
+      <option value = "15">Links M55xx</option>
+      <option value = "16">LMS</option>
+      <option value = "17">M424X</option>
+      <option value = "18">M425X</option>
+      <option value = "19">M4850 Zero Client</option>
+      <option value = "20">M5000 / M5002</option>
+      <option value = "21">M500X</option>
+      <option value = "22">M5100</option>
+      <option value = "23">M5150</option>
+      <option value = "24">M600X</option>
+      <option value = "25">M6150</option>
+      <option value = "26">M72xx</option>
+      <option value = "27">M8935-TMD</option>
+      <option value = "28">M897x Tablet</option>
+      <option value = "29">M8984-OX</option>
+      <option value = "30">Mag Stripe/Barcode Readers</option>
+      <option value = "31">Manual</option>
+      <option value = "32">Memory</option>
+      <option value = "33">Modems</option>
+      <option value = "34">Monitors</option>
+      <option value = "35">Other</option>
+      <option value = "36">POS 2</option>
+      <option value = "37">POS 3</option>
+      <option value = "38">POS 4</option>
+      <option value = "39">POS 7</option>
+      <option value = "40">Power Supply - M35XX</option>
+      <option value = "41">Printer</option>
+      <option value = "42">Software</option>
+      <option value = "43">T80xx</option>
+      <option value = "45">T8110</option>
+      <option value = "46">T8115</option>
+      <option value = "47">T8120</option>
+      <option value = "48">T8310</option>
+      <option value = "49">T8315</option>
+      <option value = "50">T8320</option>
+      <option value = "51">T850</option>
+      <option value = "52">T8510</option>
+      <option value = "53">T8515</option>
+      <option value = "54">T8520</option>
+    </select>
+
+  <label for="software">Software Product Type</label>
+  <select multiple class="form-control" id="softwareList">
+    <option value = "1"></option>
+    <option value = "2">3rd Party</option>
+    <option value = "3">BIOS</option>
+    <option value = "4">BOC</option>
+    <option value = "5">Customer Image</option>
+    <option value = "6">Diagnostics</option>
+    <option value = "7">Disk Image</option>
+    <option value = "8">GT/Exalt</option>
+    <option value = "9">Infusion/Heritage</option>
+    <option value = "10">InTouch/Inform</option>
+    <option value = "11">Manuals</option>
+    <option value = "12">Operating Systems</option>
+    <option value = "13">PC POS</option>
+    <option value = "14">PixelPoint</option>
+    <option value = "15">POS Ready 7</option>
+    <option value = "16">Siva</option>
+    <option value = "17">SureCheck</option>
+    <option value = "18">Utility</option>
+    <option value = "19">Windows 10 2015</option>
+    <option value = "20">Windows 10 2016</option>
+    <option value = "21">Windows 2000</option>
+    <option value = "22">Windows 7</option>
+    <option value = "23">Windows 8.1</option>
+    <option value = "24">Windows 9x</option>
+    <option value = "25">Windows NT</option>
+    <option value = "26">Windows XP</option>
+    </select>
+
+    <label for="model">Model</label>
+    <input type="text" id="form_model"/>
+
+    <label for="partnumber">Part Number</label>
+    <input type="text" id="partnumber"/>
+
+    <label for="partnumber2">Part Number 2</label>
+    <input type="text" id="partnumber2"/>
+
+    <label for="partnumber3">Part Number 3</label>
+    <input type="text" id="partnumber3"/>
+    
+    
+    <label for="description">Description of Problem</label>
+    <textarea id="description" rows="10" cols="30"></textarea>
+
+
+    <label for="solution">Proposed Solution</label>
+    <textarea id="solution" rows="10"></textarea>
+
+
+    <input type="checkbox" class="form-check-input" id="critical"/>
+    <label class="form-check-label" for="critical">Mission Critical</label>
+
+    <button type="submit" class="btn">Submit</button>
+  </form>
+  </div>
+  );
+}
+
+export default App
