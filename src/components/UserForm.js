@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FormCRInformation from './FormCRInformation';
 import FormUserDetails from './FormUserDetails';
 
 export class UserForm extends Component {
@@ -9,6 +10,16 @@ export class UserForm extends Component {
         email: '',
         supervisor: '',
         supervisorEmail: '',
+        date:'',
+        dateNeeded:'',
+        revision:'',
+        model:'',
+        hardwareList:'',
+        softwareList:'',
+        partNumber: '',
+        partNumber2: '',
+        partNumber3: '',
+        critical: '',
     }
 
     // Proceed to next step
@@ -36,8 +47,42 @@ export class UserForm extends Component {
 
     render() {
         const { step } = this.state;
-        const { firstName, lastName, email, department, supervisor, supervisorEmail} = this.state;
-        const values = { firstName, lastName, email, department, supervisor, supervisorEmail};
+        const { 
+            firstName, 
+            lastName, 
+            email, 
+            department, 
+            supervisor, 
+            supervisorEmail,
+            date,
+            dateNeeded,
+            revision,
+            model,
+            hardwareList,
+            softwareList,
+            partNumber,
+            partNumber2,
+            partNumber3,
+            critical,
+        } = this.state;
+        const values = { 
+            firstName, 
+            lastName, 
+            email, 
+            department, 
+            supervisor, 
+            supervisorEmail,
+            date,
+            dateNeeded,
+            revision,
+            model,
+            hardwareList,
+            softwareList,
+            partNumber,
+            partNumber2,
+            partNumber3,
+            critical,
+        }
 
         switch(step) {
             case 1:
@@ -49,7 +94,14 @@ export class UserForm extends Component {
                     />
                 )
             case 2:
-                return <h1>FormUserDetails</h1>
+                return (
+                    <FormCRInformation
+                        nextStep={this.nextStep}
+                        previousStep={this.previousStep}
+                        handleChange={this.handleChange}
+                        value={values}
+                    />
+                )
             case 3:
                 return <h1>Confirm</h1>
             case 4:

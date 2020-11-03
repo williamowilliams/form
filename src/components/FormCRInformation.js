@@ -4,6 +4,7 @@ import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
+
 export class FormCRInformation extends Component {
 
     continue = e => {
@@ -22,6 +23,15 @@ export class FormCRInformation extends Component {
             <MuiThemeProvider>
                 <React.Fragment>
                     <AppBar title="Enter Change Request Information" />
+                    <TextField
+                        id="datetime-local"
+                        label="Next appointment"
+                        type="datetime-local"
+                        defaultValue="2017-05-24T10:30"
+                        InputLabelProps={{
+                        shrink: true,
+                    }}
+                    />
                     <TextField
                         hintText="Enter the Revision Number"
                         floatingLabelText="Revision Number"
@@ -62,6 +72,13 @@ export class FormCRInformation extends Component {
                         primary={true}
                         styles={styles.button}
                         onClick={this.continue}
+                    />
+                    <br/>
+                    <RaisedButton
+                        label="Back"
+                        primary={false}
+                        styles={styles.button}
+                        onClick={this.back}
                     />
                 </React.Fragment>
             </MuiThemeProvider>
