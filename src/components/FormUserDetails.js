@@ -4,6 +4,7 @@ import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
+
 export class FormUserDetails extends Component {
     continue = e => {
         e.preventDefault();
@@ -14,7 +15,8 @@ export class FormUserDetails extends Component {
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Enter User Details" />
+                    <AppBar style={{ background: 'red' }} title="Engineering Change Request" />
+                    <h1>Enter User Details</h1>
                     <TextField
                         hintText="Enter Your First Name"
                         floatingLabelText="First Name"
