@@ -83,7 +83,7 @@ export class UserForm extends Component {
             partNumber3,
             critical,
         }
-
+        // eslint-disable-next-line
         switch(step) {
             case 1:
                 return (
