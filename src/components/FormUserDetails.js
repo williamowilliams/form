@@ -9,13 +9,14 @@ export class FormUserDetails extends Component {
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
-    }
+    };
+
     render() {
         const { values, handleChange } = this.props;
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar style={{ background: 'red' }} title="Engineering Change Request" />
+                    <AppBar title="Engineering Change Request" />
                     <h1>Enter User Details</h1>
                     <TextField
                         hintText="Enter Your First Name"
